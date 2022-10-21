@@ -27,7 +27,7 @@ Use classes if identity needs to be controlled, i.e. mutation of the class needs
 - Whenever a procedure accepts a limited set of variables, consider using an enumeration.
 - Raw values are compile time-set values directly assigned to every case within an enumeration.  You can explicityly assign a raw value: 
 
-```
+```swift
 enum Character: Int {
 	case letter = 6
 	case digit
@@ -42,7 +42,7 @@ special are implicitly assigned as
 
 - Associated values allow you to store values of other types alongside case values:
 
-```
+```swift
 enum Character: Int {
 	case letter(Int)
 	case digit
