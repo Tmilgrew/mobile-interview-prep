@@ -1,6 +1,6 @@
-#Domain Knowledge
+# Domain Knowledge
 
-##Classes vs Structs vs Enum vs Protocol
+## Classes vs Structs vs Enum vs Protocol
 <b>Classes:</b>
 
 - Allocated on the heap
@@ -23,11 +23,38 @@ Use classes if identity needs to be controlled, i.e. mutation of the class needs
 
 <b>Enum:</b>
 
+- An enumeration defines a common type for a group of related values and enables you to work with those values in a type-safe way within your code.
+- Whenever a procedure accepts a limited set of variables, consider using an enumeration.
+- Raw values are compile time-set values directly assigned to every case within an enumeration.  You can explicityly assign a raw value: 
+
+```
+enum Character: Int {
+	case letter = 6
+	case digit
+	case special
+}
+ 
+In this case the raw value for letter
+is assigned as 6, while digit and 
+special are implicitly assigned as 
+2 and 3.
+```
+
+- Associated values allow you to store values of other types alongside case values:
+
+```
+enum Character: Int {
+	case letter(Int)
+	case digit
+	case special(String)
+}
+```
+
 <b>Protocol:</b>
 
-##Design Patterns
+## Design Patterns
 
-###Structural Design Patterns
+### Structural Design Patterns
 <b>MVC</b>
 
 
